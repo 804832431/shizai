@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSAccountInfoCell" rowHeight="70" id="p5C-Ao-Zyz" customClass="ForgetAccountbtnCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p5C-Ao-Zyz" id="SZf-pf-1lY">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XYk-h9-KFJ">
+                        <rect key="frame" x="193" y="30" width="127" height="39"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="127" id="dkE-mR-Ash"/>
+                        </constraints>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJH-XD-D4C" customClass="VSTextField">
+                        <rect key="frame" x="64" y="30" width="129" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Fj7-Gj-bJ4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfK-nB-FKj">
+                        <rect key="frame" x="25" y="69" width="270" height="1"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="8FF-1J-vT3"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XYk-h9-KFJ" firstAttribute="top" secondItem="SZf-pf-1lY" secondAttribute="top" constant="30" id="49c-9a-Mi6"/>
+                    <constraint firstItem="XYk-h9-KFJ" firstAttribute="leading" secondItem="hJH-XD-D4C" secondAttribute="trailing" id="Cex-p5-6nS"/>
+                    <constraint firstAttribute="trailing" secondItem="XYk-h9-KFJ" secondAttribute="trailing" id="KVd-W8-Z1M"/>
+                    <constraint firstItem="hJH-XD-D4C" firstAttribute="leading" secondItem="SZf-pf-1lY" secondAttribute="leading" constant="64" id="Vsw-XI-fVI"/>
+                    <constraint firstAttribute="trailing" secondItem="SfK-nB-FKj" secondAttribute="trailing" constant="25" id="fWW-QT-clt"/>
+                    <constraint firstItem="hJH-XD-D4C" firstAttribute="top" secondItem="SZf-pf-1lY" secondAttribute="top" constant="30" id="kTB-S7-1Or"/>
+                    <constraint firstItem="SfK-nB-FKj" firstAttribute="leading" secondItem="SZf-pf-1lY" secondAttribute="leading" constant="25" id="nY7-IF-NGX"/>
+                    <constraint firstAttribute="bottom" secondItem="XYk-h9-KFJ" secondAttribute="bottom" constant="1" id="rkH-rb-bYn"/>
+                    <constraint firstAttribute="bottom" secondItem="SfK-nB-FKj" secondAttribute="bottom" id="s0H-Ym-Cmh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="vm_getcodeBtn" destination="XYk-h9-KFJ" id="E7a-3p-Y3F"/>
+                <outlet property="vm_txtInfo" destination="hJH-XD-D4C" id="HMe-gr-n7L"/>
+            </connections>
+            <point key="canvasLocation" x="320" y="210"/>
+        </tableViewCell>
+    </objects>
+</document>

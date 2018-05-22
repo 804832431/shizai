@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RTXLeaseListViewController">
+            <connections>
+                <outlet property="leaseBtn" destination="oEn-Va-wca" id="pBJ-pw-3kS"/>
+                <outlet property="tableView" destination="gEG-4m-g1B" id="4oc-tG-plQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoH-WZ-RBx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEn-Va-wca">
+                            <rect key="frame" x="17" y="418" width="286" height="45"/>
+                            <color key="backgroundColor" red="0.14509803921568629" green="0.50196078431372548" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="C9r-TZ-PSN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="我要出租">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-4m-g1B">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="408"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="25g-Vc-z6N"/>
+                                <outlet property="delegate" destination="-1" id="kNo-cl-7A8"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="oEn-Va-wca" secondAttribute="bottom" constant="17" id="3aE-vm-YUl"/>
+                        <constraint firstItem="oEn-Va-wca" firstAttribute="leading" secondItem="RoH-WZ-RBx" secondAttribute="leading" constant="17" id="Rwf-CS-d5X"/>
+                        <constraint firstItem="gEG-4m-g1B" firstAttribute="bottom" secondItem="oEn-Va-wca" secondAttribute="top" constant="-10" id="Z0e-PH-Xho"/>
+                        <constraint firstAttribute="trailing" secondItem="gEG-4m-g1B" secondAttribute="trailing" id="lDm-Ug-Aqg"/>
+                        <constraint firstItem="gEG-4m-g1B" firstAttribute="leading" secondItem="RoH-WZ-RBx" secondAttribute="leading" id="rCC-EV-l0f"/>
+                        <constraint firstItem="gEG-4m-g1B" firstAttribute="top" secondItem="RoH-WZ-RBx" secondAttribute="top" id="skV-l6-Jav"/>
+                        <constraint firstAttribute="trailing" secondItem="oEn-Va-wca" secondAttribute="trailing" constant="17" id="tw8-Vo-c7q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RoH-WZ-RBx" secondAttribute="trailing" id="Aoq-iS-H8G"/>
+                <constraint firstItem="RoH-WZ-RBx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qk0-Mx-Uxh"/>
+                <constraint firstAttribute="bottom" secondItem="RoH-WZ-RBx" secondAttribute="bottom" id="XSf-GB-N4m"/>
+                <constraint firstItem="RoH-WZ-RBx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="php-Ak-kFF"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

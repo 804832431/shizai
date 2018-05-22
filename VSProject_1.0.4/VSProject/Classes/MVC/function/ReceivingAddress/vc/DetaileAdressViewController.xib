@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetaileAdressViewController">
+            <connections>
+                <outlet property="textView" destination="1pI-ya-Grc" id="Rl4-ha-Q46"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhm-8u-Jzf">
+                    <rect key="frame" x="0.0" y="77" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HSO-1Y-lAa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1pI-ya-Grc">
+                    <rect key="frame" x="17" y="90" width="290" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="N5N-BG-aVJ"/>
+                    </constraints>
+                    <color key="textColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6p-Ta-hkk">
+                    <rect key="frame" x="0.0" y="154" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.82745098039215681" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="q8D-wd-PTu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Dhm-8u-Jzf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9gB-We-bTs"/>
+                <constraint firstItem="l6p-Ta-hkk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9yx-zq-uO9"/>
+                <constraint firstAttribute="trailing" secondItem="1pI-ya-Grc" secondAttribute="trailing" constant="13" id="CJQ-7b-wmT"/>
+                <constraint firstItem="1pI-ya-Grc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="LF4-Xw-5fG"/>
+                <constraint firstItem="Dhm-8u-Jzf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="N3p-aM-PFZ"/>
+                <constraint firstItem="l6p-Ta-hkk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="154" id="iFI-nY-AhR"/>
+                <constraint firstItem="1pI-ya-Grc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="oQH-JE-Alw"/>
+                <constraint firstAttribute="trailing" secondItem="l6p-Ta-hkk" secondAttribute="trailing" id="oyd-Hi-83d"/>
+                <constraint firstAttribute="trailing" secondItem="Dhm-8u-Jzf" secondAttribute="trailing" id="ynx-rF-aaC"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

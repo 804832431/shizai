@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeShareLineView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fpm-xP-aoN">
+                    <rect key="frame" x="11" y="0.0" width="120" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fpm-xP-aoN" secondAttribute="height" multiplier="240:180" id="o0v-Hy-ngl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wrp-Zs-zGb">
+                    <rect key="frame" x="147" y="8" width="212" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.18823529411764706" green="0.18431372549019609" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9u-Cg-nf7">
+                    <rect key="frame" x="159" y="69" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="M3S-Gn-Xg5"/>
+                        <constraint firstAttribute="width" constant="200" id="Nlf-9S-3ab"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="O9u-Cg-nf7" firstAttribute="top" secondItem="Wrp-Zs-zGb" secondAttribute="bottom" id="8d9-4w-FFA"/>
+                <constraint firstAttribute="trailing" secondItem="Wrp-Zs-zGb" secondAttribute="trailing" constant="16" id="8kh-cZ-d0B"/>
+                <constraint firstAttribute="bottom" secondItem="Fpm-xP-aoN" secondAttribute="bottom" id="973-Wh-6cM"/>
+                <constraint firstItem="Wrp-Zs-zGb" firstAttribute="leading" secondItem="Fpm-xP-aoN" secondAttribute="trailing" constant="16" id="S5H-nR-b2R"/>
+                <constraint firstItem="Wrp-Zs-zGb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="eiF-0d-3rY"/>
+                <constraint firstItem="Fpm-xP-aoN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="11" id="ijf-vA-gPh"/>
+                <constraint firstItem="Fpm-xP-aoN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="pLZ-Kr-i0N"/>
+                <constraint firstAttribute="bottom" secondItem="O9u-Cg-nf7" secondAttribute="bottom" id="zZO-eZ-vck"/>
+                <constraint firstAttribute="trailing" secondItem="O9u-Cg-nf7" secondAttribute="trailing" constant="16" id="zw0-is-cZS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="shareImageView" destination="Fpm-xP-aoN" id="hQW-dB-Ima"/>
+                <outlet property="shareLabel" destination="Wrp-Zs-zGb" id="lFJ-5O-SZl"/>
+                <outlet property="shareTimeLabel" destination="O9u-Cg-nf7" id="0eO-hr-xAY"/>
+            </connections>
+            <point key="canvasLocation" x="32.5" y="-405"/>
+        </view>
+    </objects>
+</document>

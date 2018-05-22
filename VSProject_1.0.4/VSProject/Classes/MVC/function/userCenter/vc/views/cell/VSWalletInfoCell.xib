@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VSWalletInfoCell" id="eEA-uA-xvE" customClass="VSWalletInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eEA-uA-xvE" id="JaE-rf-W7d">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="情豆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-xp-BU7">
+                        <rect key="frame" x="8" y="0.0" width="35" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="TbF-eQ-fnf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2t-9J-9xM" userLabel="line">
+                        <rect key="frame" x="160" y="0.0" width="1" height="44"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="aJp-16-Dts"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="情花" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Geu-Rr-IOU" userLabel="情花">
+                        <rect key="frame" x="168" y="0.0" width="35" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="M4s-5w-MDE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Geu-Rr-IOU" firstAttribute="leading" secondItem="h2t-9J-9xM" secondAttribute="trailing" constant="7" id="5gR-dC-ijK"/>
+                    <constraint firstAttribute="bottom" secondItem="VAd-xp-BU7" secondAttribute="bottom" constant="-0.5" id="V8a-7k-Z0m"/>
+                    <constraint firstAttribute="bottom" secondItem="Geu-Rr-IOU" secondAttribute="bottom" constant="-0.5" id="YfO-bQ-nn1"/>
+                    <constraint firstItem="h2t-9J-9xM" firstAttribute="top" secondItem="JaE-rf-W7d" secondAttribute="top" id="ZNe-vO-oj6"/>
+                    <constraint firstAttribute="bottom" secondItem="h2t-9J-9xM" secondAttribute="bottom" constant="-0.5" id="huB-BJ-Nul"/>
+                    <constraint firstAttribute="centerX" secondItem="h2t-9J-9xM" secondAttribute="centerX" id="nY9-BE-6UV"/>
+                    <constraint firstItem="Geu-Rr-IOU" firstAttribute="top" secondItem="JaE-rf-W7d" secondAttribute="top" id="ned-4z-Khc"/>
+                    <constraint firstItem="VAd-xp-BU7" firstAttribute="leading" secondItem="JaE-rf-W7d" secondAttribute="leading" constant="8" id="rtD-qZ-4Am"/>
+                    <constraint firstItem="VAd-xp-BU7" firstAttribute="top" secondItem="JaE-rf-W7d" secondAttribute="top" id="sTX-8N-e9i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="vm_line" destination="h2t-9J-9xM" id="Pok-kz-jwh"/>
+            </connections>
+            <point key="canvasLocation" x="488" y="266"/>
+        </tableViewCell>
+    </objects>
+</document>

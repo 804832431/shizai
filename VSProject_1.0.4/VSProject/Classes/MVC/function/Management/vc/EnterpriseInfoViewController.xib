@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterpriseInfoViewController">
+            <connections>
+                <outlet property="quitBtn" destination="5zD-qO-CmN" id="gXm-0A-zay"/>
+                <outlet property="tableView" destination="orG-9a-LFp" id="yWK-1M-sEJ"/>
+                <outlet property="view" destination="aY3-56-fd0" id="BzG-pc-i3p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aY3-56-fd0">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h21-be-ggV">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="orG-9a-LFp">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="TO2-SK-mgE"/>
+                                <outlet property="delegate" destination="-1" id="7ss-aV-CFO"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zD-qO-CmN">
+                            <rect key="frame" x="15" y="430" width="290" height="45"/>
+                            <color key="backgroundColor" red="0.83921568627450982" green="0.062745098039215685" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="mUr-1x-jwd"/>
+                            </constraints>
+                            <state key="normal" title="退出企业">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="5zD-qO-CmN" firstAttribute="leading" secondItem="h21-be-ggV" secondAttribute="leading" constant="15" id="IPG-7o-aSY"/>
+                        <constraint firstItem="orG-9a-LFp" firstAttribute="bottom" secondItem="5zD-qO-CmN" secondAttribute="top" id="UJr-Dj-Q2d"/>
+                        <constraint firstAttribute="trailing" secondItem="orG-9a-LFp" secondAttribute="trailing" id="dkq-kq-Vci"/>
+                        <constraint firstItem="orG-9a-LFp" firstAttribute="top" secondItem="h21-be-ggV" secondAttribute="top" id="ezT-Aj-dcX"/>
+                        <constraint firstItem="5zD-qO-CmN" firstAttribute="centerX" secondItem="h21-be-ggV" secondAttribute="centerX" id="gRg-Wf-RJH"/>
+                        <constraint firstItem="orG-9a-LFp" firstAttribute="leading" secondItem="h21-be-ggV" secondAttribute="leading" id="oMq-6l-XPp"/>
+                        <constraint firstAttribute="bottom" secondItem="5zD-qO-CmN" secondAttribute="bottom" constant="5" id="rBL-KK-hgN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h21-be-ggV" secondAttribute="trailing" id="KaS-kD-Zfr"/>
+                <constraint firstItem="h21-be-ggV" firstAttribute="top" secondItem="aY3-56-fd0" secondAttribute="top" id="Mc1-8r-8BC"/>
+                <constraint firstAttribute="bottom" secondItem="h21-be-ggV" secondAttribute="bottom" id="S5j-ue-wgC"/>
+                <constraint firstItem="h21-be-ggV" firstAttribute="leading" secondItem="aY3-56-fd0" secondAttribute="leading" id="f8C-c5-uvf"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

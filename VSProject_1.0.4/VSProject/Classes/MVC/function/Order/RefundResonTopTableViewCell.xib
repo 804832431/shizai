@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="149" id="KGk-i7-Jjw" customClass="RefundResonTopTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退款金额:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN2-so-OLq">
+                        <rect key="frame" x="128" y="40" width="65" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥666666.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-jB-50L">
+                        <rect key="frame" x="49" y="68" width="223" height="43"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                        <color key="textColor" red="0.96470588235294119" green="0.31372549019607843" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-rv-IeO">
+                        <rect key="frame" x="0.0" y="148" width="320" height="0.0"/>
+                        <color key="backgroundColor" red="0.6588235294117647" green="0.6588235294117647" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="GFn-nx-iNj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CWO-rv-IeO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Gls-gC-fD5"/>
+                    <constraint firstItem="qN2-so-OLq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="GmX-PY-VoM"/>
+                    <constraint firstAttribute="trailing" secondItem="CWO-rv-IeO" secondAttribute="trailing" id="QqZ-ub-J9r"/>
+                    <constraint firstAttribute="bottom" secondItem="CWO-rv-IeO" secondAttribute="bottom" id="YW5-HJ-R2F"/>
+                    <constraint firstItem="qN2-so-OLq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="i0d-ka-Bhj"/>
+                    <constraint firstItem="ULp-jB-50L" firstAttribute="centerX" secondItem="qN2-so-OLq" secondAttribute="centerX" id="nht-uV-tAV"/>
+                    <constraint firstItem="ULp-jB-50L" firstAttribute="top" secondItem="qN2-so-OLq" secondAttribute="bottom" constant="10" id="z81-yF-hMY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="moneyLabel" destination="ULp-jB-50L" id="mOQ-N6-3rA"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="222.5"/>
+        </tableViewCell>
+    </objects>
+</document>

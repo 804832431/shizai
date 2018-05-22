@@ -1,0 +1,69 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <Masonry.h>
+    #import <AFNetworking.h>
+    #import "VSDefine.h"
+    #import "VSEnum.h"
+    #import "VSConst.h"
+    #import "VSConfig.h"
+    #import "VSInterface.h"
+
+    #import "UIInitProtocol.h"
+    #import "VSUIKit.h"
+
+    #import "UIImageView+VSWebImage.h"
+    #import "UIButton+VSWebImage.h"
+
+    #import "NSString+TPCategory.h"
+    #import "NSString+Filter.h"
+    #import "UIImage+TPCategory.h"
+    #import "NSDate+TPCategory.h"
+
+    #import "VSBaseTableViewCell.h"
+
+    #import "VSBaseDataModel.h"
+    #import "VSBaseNeedSaveDataModel.h"
+    #import "VSBaseParmModel.h"
+
+    #import "VSUserIDParm.h"
+    #import "VSUserIDListParm.h"
+
+    #import "UIScrollView+MJRefresh.h"
+    #import "UIView+ShowTips.h"
+    #import "UINavigationController+pushvc.h"
+    #import <UIAlertView+Blocks.h>
+    #import "UIAlertView+SimpleAlert.h"
+    #import "VSUserDefaultManager.h"
+//    #import "VSLocalNotificationManager.h"
+//    #import "VSLoginManager.h"
+    #import "UIViewController+BackBar.h"
+    #import "VSBaseHttpManager.h"
+    #import "VSUserLogicManager.h"
+    #import "AppDelegate.h"
+    #import "VSBaseLogicManager.h"
+    #import "RequestService.h"
+    #import "LocalStorage.h"
+    #import "NSDictionary+Util.h"
+    #import "Notification.h"
+    #import "RTXMotionLogicManager.h"
+    #import "JudgmentUtil.h"
+    #import "MobClick.h"
+
+    #import "SecurityUtil.h"//AES加密
+
+//页面路由
+    #import "VSPageRoute.h"
+#endif

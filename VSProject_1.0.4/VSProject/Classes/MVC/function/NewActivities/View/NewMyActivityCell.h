@@ -1,0 +1,26 @@
+//
+//  NewMyActivityCell.h
+//  VSProject
+//
+//  Created by apple on 10/18/16.
+//  Copyright © 2016 user. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "NewActivityModel.h"
+
+@interface NewMyActivityCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *activityStatusLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *enrollLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthOfEnrollLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *activityImageView;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *chargeLabel;
+@property (weak, nonatomic) IBOutlet UIView *realContentView;
+
+- (void)setDataSource:(NewActivityModel *)activityModel;
+
+@end

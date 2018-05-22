@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="YKa-Sr-EpW" customClass="ShoppingCartBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaC-FC-R9J">
+                    <rect key="frame" x="16" y="12" width="40" height="23"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="d7M-Cs-MZa"/>
+                        <constraint firstAttribute="width" constant="40" id="hFR-FR-JZq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="清空">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clearButtonAction:" destination="YKa-Sr-EpW" eventType="touchUpInside" id="Zjw-AV-cqc"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计：¥22.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3b0-pV-FL3">
+                    <rect key="frame" x="80" y="10" width="85" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNx-jW-UZ8">
+                    <rect key="frame" x="465" y="0.0" width="135" height="50"/>
+                    <color key="backgroundColor" red="0.94509803921568625" green="0.32549019607843138" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="135" id="WXE-dG-z6p"/>
+                        <constraint firstAttribute="height" constant="50" id="Ych-vi-uXC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="去结算">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="okAction:" destination="YKa-Sr-EpW" eventType="touchUpInside" id="o4u-9n-IaO"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不包含运费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-qT-ax0">
+                    <rect key="frame" x="80" y="31" width="50" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.78823529411764703" green="0.79607843137254897" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JaC-FC-R9J" firstAttribute="top" secondItem="YKa-Sr-EpW" secondAttribute="top" constant="12" id="3UH-LN-0oT"/>
+                <constraint firstItem="qdW-qT-ax0" firstAttribute="leading" secondItem="3b0-pV-FL3" secondAttribute="leading" id="CAI-Y7-f9J"/>
+                <constraint firstItem="3b0-pV-FL3" firstAttribute="centerY" secondItem="JaC-FC-R9J" secondAttribute="centerY" constant="-10" id="J3Q-8T-CcH"/>
+                <constraint firstAttribute="trailing" secondItem="pNx-jW-UZ8" secondAttribute="trailing" id="Jta-Kd-IO1"/>
+                <constraint firstItem="qdW-qT-ax0" firstAttribute="top" secondItem="3b0-pV-FL3" secondAttribute="bottom" constant="3" id="Oj0-gR-JvD"/>
+                <constraint firstItem="JaC-FC-R9J" firstAttribute="leading" secondItem="YKa-Sr-EpW" secondAttribute="leading" constant="16" id="Qvc-Ep-CID"/>
+                <constraint firstItem="3b0-pV-FL3" firstAttribute="leading" secondItem="JaC-FC-R9J" secondAttribute="trailing" constant="24" id="YsB-7U-T2l"/>
+                <constraint firstItem="pNx-jW-UZ8" firstAttribute="top" secondItem="YKa-Sr-EpW" secondAttribute="top" id="dME-yO-EPw"/>
+                <constraint firstItem="3b0-pV-FL3" firstAttribute="top" secondItem="YKa-Sr-EpW" secondAttribute="top" constant="10" id="lQD-qZ-fzI"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="J3Q-8T-CcH"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="clearButton" destination="JaC-FC-R9J" id="QA9-WL-qVn"/>
+                <outlet property="totalMoney" destination="3b0-pV-FL3" id="6Xm-xr-Phg"/>
+            </connections>
+            <point key="canvasLocation" x="437" y="-54"/>
+        </view>
+    </objects>
+</document>

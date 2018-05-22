@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="KGk-i7-Jjw" customClass="MessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="313" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_ring" translatesAutoresizingMaskIntoConstraints="NO" id="Hs8-qq-Lfg">
+                        <rect key="frame" x="10" y="13" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="JwP-sZ-Hf7"/>
+                            <constraint firstAttribute="width" secondItem="Hs8-qq-Lfg" secondAttribute="height" multiplier="1:1" id="alF-lI-fbP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-10-01  10:12:13" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRc-xp-Ipw" userLabel="timeLabel">
+                        <rect key="frame" x="60" y="8" width="236" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="Mjh-ij-NXz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.36078431372549019" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4C-01-SGD" userLabel="titleLabel">
+                        <rect key="frame" x="70" y="33" width="213" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RRc-xp-Ipw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KfL-uu-G9i"/>
+                    <constraint firstItem="E4C-01-SGD" firstAttribute="trailing" secondItem="RRc-xp-Ipw" secondAttribute="trailing" id="ZCs-VK-A63"/>
+                    <constraint firstItem="E4C-01-SGD" firstAttribute="leading" secondItem="Hs8-qq-Lfg" secondAttribute="trailing" constant="10" id="iXS-Ln-iPo"/>
+                    <constraint firstItem="RRc-xp-Ipw" firstAttribute="leading" secondItem="Hs8-qq-Lfg" secondAttribute="trailing" id="rtb-KE-cwp"/>
+                    <constraint firstItem="E4C-01-SGD" firstAttribute="top" secondItem="RRc-xp-Ipw" secondAttribute="bottom" id="uli-GU-0Bj"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ZCs-VK-A63"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="Hs8-qq-Lfg" firstAttribute="leading" secondItem="KGk-i7-Jjw" secondAttribute="leading" constant="10" id="AFZ-Qi-Py3"/>
+                <constraint firstItem="Hs8-qq-Lfg" firstAttribute="top" secondItem="KGk-i7-Jjw" secondAttribute="top" constant="13" id="GJy-Kw-V9R"/>
+                <constraint firstAttribute="trailing" secondItem="E4C-01-SGD" secondAttribute="trailing" constant="30" id="Lov-wb-hQs"/>
+                <constraint firstAttribute="trailing" secondItem="RRc-xp-Ipw" secondAttribute="trailing" constant="17" id="b88-Hh-G73"/>
+            </constraints>
+            <connections>
+                <outlet property="m_imageView" destination="Hs8-qq-Lfg" id="Cet-Wt-g4s"/>
+                <outlet property="m_timeLabel" destination="RRc-xp-Ipw" id="OFb-lo-Zmc"/>
+                <outlet property="m_titleLabel" destination="E4C-01-SGD" id="cno-Wn-o1E"/>
+            </connections>
+            <point key="canvasLocation" x="214.5" y="191"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="message_ring" width="87" height="87"/>
+    </resources>
+</document>

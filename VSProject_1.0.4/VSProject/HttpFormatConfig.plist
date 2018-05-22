@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HttpFormatConfig</key>
+	<string></string>
+	<key>codeKey</key>
+	<string>resultCode</string>
+	<key>messageKey</key>
+	<string>errorMessage</string>
+	<key>dataKey</key>
+	<string>Data</string>
+	<key>codeValues</key>
+	<dict>
+		<key>successCode</key>
+		<string>CODE-00000</string>
+		<key>errorCode</key>
+		<string>0</string>
+	</dict>
+</dict>
+</plist>

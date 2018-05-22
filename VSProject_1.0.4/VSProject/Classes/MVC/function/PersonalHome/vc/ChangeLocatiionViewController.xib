@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeLocatiionViewController">
+            <connections>
+                <outlet property="sureButton" destination="CRD-5r-bd6" id="zbc-Ch-ok7"/>
+                <outlet property="tableView" destination="aXE-EQ-RbZ" id="VKD-AX-gUH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="58" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXE-EQ-RbZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="6YL-Jo-Jhi"/>
+                    </constraints>
+                    <color key="sectionIndexBackgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                    <view key="tableFooterView" contentMode="scaleToFill" id="VdG-tP-Llm">
+                        <rect key="frame" x="0.0" y="207" width="320" height="93"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRD-5r-bd6">
+                                <rect key="frame" x="20" y="53" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.14509803921568629" green="0.50196078431372548" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mvm-2I-L9N"/>
+                                </constraints>
+                                <state key="normal" title="确定">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CRD-5r-bd6" secondAttribute="trailing" constant="20" id="FJc-0l-f5O"/>
+                            <constraint firstItem="CRD-5r-bd6" firstAttribute="leading" secondItem="VdG-tP-Llm" secondAttribute="leading" constant="20" id="ROd-kn-jPr"/>
+                            <constraint firstItem="CRD-5r-bd6" firstAttribute="top" secondItem="VdG-tP-Llm" secondAttribute="top" constant="53" id="mkG-8P-oRP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="z8U-xR-JBS"/>
+                        <outlet property="delegate" destination="-1" id="Qke-YB-AzF"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aXE-EQ-RbZ" secondAttribute="trailing" id="XoI-3p-Mdr"/>
+                <constraint firstItem="aXE-EQ-RbZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YHA-Di-05Y"/>
+                <constraint firstItem="aXE-EQ-RbZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mIz-Zp-4bS"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

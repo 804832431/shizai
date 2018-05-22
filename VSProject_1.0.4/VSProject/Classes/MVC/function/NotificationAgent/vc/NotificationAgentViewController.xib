@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationAgentViewController">
+            <connections>
+                <outlet property="view" destination="EJM-pe-uhD" id="pap-2h-uVO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EJM-pe-uhD">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldT-tb-IdC">
+                    <rect key="frame" x="0.0" y="64" width="320" height="464"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jqqd" translatesAutoresizingMaskIntoConstraints="NO" id="RLs-68-NLT">
+                            <rect key="frame" x="20" y="108" width="280" height="248"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="RLs-68-NLT" secondAttribute="height" multiplier="569:506" id="pT4-y9-AvR"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="RLs-68-NLT" firstAttribute="centerX" secondItem="ldT-tb-IdC" secondAttribute="centerX" id="2Kz-vu-c9c"/>
+                        <constraint firstItem="RLs-68-NLT" firstAttribute="leading" secondItem="ldT-tb-IdC" secondAttribute="leading" constant="20" id="3yr-ZL-qdL"/>
+                        <constraint firstItem="RLs-68-NLT" firstAttribute="centerY" secondItem="ldT-tb-IdC" secondAttribute="centerY" id="Elj-83-opJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ldT-tb-IdC" secondAttribute="trailing" id="BHv-BX-O2Q"/>
+                <constraint firstItem="ldT-tb-IdC" firstAttribute="top" secondItem="EJM-pe-uhD" secondAttribute="top" constant="64" id="a91-cL-4rd"/>
+                <constraint firstAttribute="bottom" secondItem="ldT-tb-IdC" secondAttribute="bottom" constant="40" id="geI-bH-KkZ"/>
+                <constraint firstItem="ldT-tb-IdC" firstAttribute="leading" secondItem="EJM-pe-uhD" secondAttribute="leading" id="x3R-Gq-ySm"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="jqqd" width="569" height="506"/>
+    </resources>
+</document>

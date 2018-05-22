@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OneConsignSuccessView">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_sussces" translatesAutoresizingMaskIntoConstraints="NO" id="1Xy-b8-Y2d">
+                    <rect key="frame" x="75.5" y="-10" width="110" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="HwX-Vd-DKo"/>
+                        <constraint firstAttribute="width" constant="110" id="xTJ-Bi-o4b"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请您保持电话畅通，我们的客服将会与您进行联系。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a68-qt-Rs6">
+                    <rect key="frame" x="15" y="120.5" width="230" height="61.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59607843137254901" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="委托成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6M-ft-LGL">
+                    <rect key="frame" x="0.0" y="100" width="260" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="cj6-jw-mnL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="t6M-ft-LGL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DPp-vW-HnK"/>
+                <constraint firstItem="a68-qt-Rs6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="c8W-ad-2IN"/>
+                <constraint firstAttribute="trailing" secondItem="a68-qt-Rs6" secondAttribute="trailing" constant="15" id="dcc-Az-Zhi"/>
+                <constraint firstItem="t6M-ft-LGL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="100" id="gJa-ct-dOx"/>
+                <constraint firstItem="1Xy-b8-Y2d" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hxh-4a-wQx"/>
+                <constraint firstAttribute="bottom" secondItem="a68-qt-Rs6" secondAttribute="bottom" constant="13" id="lkG-Bh-NnG"/>
+                <constraint firstAttribute="trailing" secondItem="t6M-ft-LGL" secondAttribute="trailing" id="nV7-nr-L7P"/>
+                <constraint firstItem="1Xy-b8-Y2d" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-10" id="rug-t1-Fvl"/>
+                <constraint firstItem="a68-qt-Rs6" firstAttribute="top" secondItem="t6M-ft-LGL" secondAttribute="bottom" id="uh5-Sa-JOn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="37" y="-62.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_sussces" width="520" height="200"/>
+    </resources>
+</document>
