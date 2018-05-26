@@ -27,7 +27,7 @@
 #import "VSFileHelper.h"
 #import "VSUserLoginViewController.h"
 #import "LDResisterManger.h"
-#import "APService.h"
+#import "JPUSHService.h"
 #import "HomeCNewViewController.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "AlixPayResult.h"
@@ -46,12 +46,15 @@
 #import "ServerViewController.h"
 #import "MeCenterViewController.h"
 #import "DiscoverViewController.h"
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 #define WeiXinAppId @"wx67dc6cf99d12873a"
 #define UmengAppKey @"56821e1067e58edc53002526"
 
 
-@interface AppDelegate ()<UITabBarControllerDelegate> {
+@interface AppDelegate ()<UITabBarControllerDelegate,JPUSHRegisterDelegate> {
     
     VSNavigationViewController *guideNavigation;
     CGRect rect;
@@ -97,8 +100,28 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
     checkPass = NO;
     launchAnimationFireout = NO;
     [self checkInterfaceVersion];
+    
     //开启极光推送
-    [Notification startJPushWithOptions:launchOptions];
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    [JPUSHService setupWithOption:launchOptions
+                           appKey:@"cedf79f550682349b8ea15ab"
+                          channel:@"App Store"
+                 apsForProduction:NO
+            advertisingIdentifier:nil];
+    
+    //2.1.9版本新增获取registration id block接口。
+    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+        if(resCode == 0){
+            NSLog(@"registrationID获取成功：%@",registrationID);
+        }
+        else{
+            NSLog(@"registrationID获取失败，code：%d",resCode);
+        }
+    }];
+//    [Notification startJPushWithOptions:launchOptions];
+    
     application.applicationIconBadgeNumber = 1;
     application.applicationIconBadgeNumber = 0;
     
@@ -435,7 +458,7 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
     DBLog(@"userInfo--%@",userInfo);
     
     if (application.applicationState == UIApplicationStateActive) {
-        [APService handleRemoteNotification:userInfo];
+        [JPUSHService handleRemoteNotification:userInfo];
         application.applicationIconBadgeNumber = 1;
         application.applicationIconBadgeNumber = 0;
         
@@ -443,24 +466,104 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:[aps objectForKey:@"alert"] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
         [alert show];
     }else {
-        MessageModel *model = [MessageModel new];
-        model.id = [userInfo objectForKey:@"MESSAGE_ID"];
-        MessageContentViewController *vc = [[MessageContentViewController alloc]init];
-        vc.m_model = model;
-        [self.window.rootViewController presentViewController:vc animated:NO completion:^{
-            //
-        }];
+//        MessageModel *model = [MessageModel new];
+//        model.id = [[userInfo objectForKey:@"extras"] objectForKey:@"MESSAGE_ID"];
+//        MessageContentViewController *vc = [[MessageContentViewController alloc]init];
+//        vc.m_model = model;
+//        [self.window.rootViewController presentViewController:vc animated:NO completion:^{
+//            //
+//        }];
+        NSDictionary *aps = [userInfo objectForKey:@"aps"];
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:[aps objectForKey:@"alert"] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"deviceToken=%@",deviceToken);
-    [APService registerDeviceToken:deviceToken];
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     
 }
 
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#pragma mark- JPUSHRegisterDelegate
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    
+    UNNotificationRequest *request = notification.request; // 收到推送的请求
+    UNNotificationContent *content = request.content; // 收到推送的消息内容
+    
+    NSNumber *badge = content.badge;  // 推送消息的角标
+    NSString *body = content.body;    // 推送消息体
+    UNNotificationSound *sound = content.sound;  // 推送消息的声音
+    NSString *subtitle = content.subtitle;  // 推送消息的副标题
+    NSString *title = content.title;  // 推送消息的标题
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+        NSLog(@"iOS10 前台收到远程通知:%@", [self logDic:userInfo]);
+        
+        [self pushAlertInApp:[UIApplication sharedApplication] userInfo:userInfo];
+    }
+    else {
+        // 判断为本地通知
+        NSLog(@"iOS10 前台收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+    completionHandler(UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+}
 
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    UNNotificationRequest *request = response.notification.request; // 收到推送的请求
+    UNNotificationContent *content = request.content; // 收到推送的消息内容
+    
+    NSNumber *badge = content.badge;  // 推送消息的角标
+    NSString *body = content.body;    // 推送消息体
+    UNNotificationSound *sound = content.sound;  // 推送消息的声音
+    NSString *subtitle = content.subtitle;  // 推送消息的副标题
+    NSString *title = content.title;  // 推送消息的标题
+    
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+        NSLog(@"iOS10 收到远程通知:%@", [self logDic:userInfo]);
+        [self pushAlertInApp:[UIApplication sharedApplication] userInfo:userInfo];
+        
+    }
+    else {
+        // 判断为本地通知
+        NSLog(@"iOS10 收到本地通知:{\nbody:%@，\ntitle:%@,\nsubtitle:%@,\nbadge：%@，\nsound：%@，\nuserInfo：%@\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+    
+    completionHandler();  // 系统要求执行这个方法
+}
+#endif
+
+// log NSSet with UTF8
+// if not ,log will be \Uxxx
+- (NSString *)logDic:(NSDictionary *)dic {
+    if (![dic count]) {
+        return nil;
+    }
+    NSString *tempStr1 =
+    [[dic description] stringByReplacingOccurrencesOfString:@"\\u"
+                                                 withString:@"\\U"];
+    NSString *tempStr2 =
+    [tempStr1 stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+    NSString *tempStr3 =
+    [[@"\"" stringByAppendingString:tempStr2] stringByAppendingString:@"\""];
+    NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+    NSString *str =
+    [NSPropertyListSerialization propertyListFromData:tempData
+                                     mutabilityOption:NSPropertyListImmutable
+                                               format:NULL
+                                     errorDescription:NULL];
+    return str;
+}
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {

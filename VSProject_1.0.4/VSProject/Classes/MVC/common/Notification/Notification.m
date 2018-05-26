@@ -7,7 +7,8 @@
 //
 
 #import "Notification.h"
-#import "APService.h"
+//#import "JPushNotificationExtensionService.h"
+#import "JPUSHService.h"
 
 #define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define _IPHONE80_ 80000
@@ -71,21 +72,11 @@
     
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         //可以添加自定义categories
-        [APService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
-                                                       UIUserNotificationTypeSound |
-                                                       UIUserNotificationTypeAlert)
-                                           categories:nil];
+        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:NO];
     } else {
         //categories 必须为nil
-        [APService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                       UIRemoteNotificationTypeSound |
-                                                       UIRemoteNotificationTypeAlert)
-                                           categories:nil];
+        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:NO];
     }
-    
-    // Required
-    [APService setupWithOption:launchOptions];
-
 }
 
 //极光打别名
@@ -96,7 +87,11 @@
 
     if (partyId) {
         NSString *Alia = [NSString stringWithFormat:@"%@%@",partyId,PUSH_SUFFIX];
-        [APService setAlias:Alia callbackSelector:@selector(resetJPushAlias) object:self];
+        [JPUSHService setAlias:Alia completion:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+            if (iResCode != 0) {
+                [self setJPushAlias];
+            }
+        } seq:0];
     }
 }
 
@@ -104,19 +99,29 @@
 + (void)setJPushTag {
     //打标签
     NSSet *tags = [NSSet setWithArray:[NSArray arrayWithObjects:@"customer", nil]];
-    [APService setTags:tags callbackSelector:@selector(resetJPushTag) object:self];
+    [JPUSHService setTags:tags completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
+        if (iResCode != 0) {
+            [self setJPushTag];
+        }
+    } seq:0];
 }
 
 //极光删别名
 + (void)removeJPushAlias {
-    
-    [APService setAlias:@"" callbackSelector:nil object:self];
+    [JPUSHService deleteAlias:^(NSInteger iResCode, NSString *iAlias, NSInteger seq) {
+        if (iResCode != 0) {
+            [self removeJPushAlias];
+        }
+    } seq:0];
 }
 
 //极光删标签
 + (void)removeJPushTag {
-    
-    [APService setTags:[NSSet set] callbackSelector:nil object:self];
+    [JPUSHService deleteTags:[NSSet set] completion:^(NSInteger iResCode, NSSet *iTags, NSInteger seq) {
+        if (iResCode != 0) {
+            [self removeJPushTag];
+        }
+    } seq:0];
 }
 
 //重打标签对象方法

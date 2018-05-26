@@ -59,6 +59,9 @@
 		18605EE41F0A6B0B00797F52 /* PolicySelectIndustryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18605EE31F0A6B0B00797F52 /* PolicySelectIndustryView.m */; };
 		18605EE71F0A9C1600797F52 /* PolicySelectTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18605EE61F0A9C1600797F52 /* PolicySelectTimeView.m */; };
 		18605EEA1F0B726000797F52 /* ArrowUpAndDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18605EE91F0B726000797F52 /* ArrowUpAndDownButton.m */; };
+		1886D67620B8159000F8C0E8 /* jcore-ios-1.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67120B8158F00F8C0E8 /* jcore-ios-1.1.9.a */; };
+		1886D67720B8159000F8C0E8 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67420B8158F00F8C0E8 /* jpush-ios-3.0.9.a */; };
+		1886D67C20B82BB500F8C0E8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67B20B82BB400F8C0E8 /* libresolv.tbd */; };
 		189DE9411DD5C741008C2F11 /* VSAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DE9401DD5C741008C2F11 /* VSAdsView.m */; };
 		18D9583C1DB37ECB0082DB7E /* NewActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9583A1DB37ECB0082DB7E /* NewActivityCell.m */; };
 		18D9583D1DB37ECB0082DB7E /* NewActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D9583B1DB37ECB0082DB7E /* NewActivityCell.xib */; };
@@ -952,7 +955,6 @@
 		FF2CB0991CBF86C10054878F /* LeaseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2CB0971CBF86C10054878F /* LeaseListCell.m */; };
 		FF2CB09A1CBF86C10054878F /* LeaseListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2CB0981CBF86C10054878F /* LeaseListCell.xib */; };
 		FF2CB09D1CBFB24F0054878F /* MyRentalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2CB09C1CBFB24F0054878F /* MyRentalModel.m */; };
-		FF2CB09F1CC077080054878F /* libPushSDK-1.8.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CB09E1CC077080054878F /* libPushSDK-1.8.8.a */; };
 		FF2CB0A11CC077260054878F /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CB0A01CC077260054878F /* libMobClickLibrary.a */; };
 		FF2CB0A31CC0775F0054878F /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CB0A21CC0775F0054878F /* libWeiboSDK.a */; };
 		FF2CB0A51CC077760054878F /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2CB0A41CC077760054878F /* libWeChatSDK.a */; };
@@ -1174,6 +1176,11 @@
 		18605EE61F0A9C1600797F52 /* PolicySelectTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PolicySelectTimeView.m; sourceTree = "<group>"; };
 		18605EE81F0B726000797F52 /* ArrowUpAndDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowUpAndDownButton.h; sourceTree = "<group>"; };
 		18605EE91F0B726000797F52 /* ArrowUpAndDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowUpAndDownButton.m; sourceTree = "<group>"; };
+		1886D66520B7B31B00F8C0E8 /* VSProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VSProject.entitlements; sourceTree = "<group>"; };
+		1886D67120B8158F00F8C0E8 /* jcore-ios-1.1.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.9.a"; sourceTree = "<group>"; };
+		1886D67320B8158F00F8C0E8 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		1886D67420B8158F00F8C0E8 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
+		1886D67B20B82BB400F8C0E8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		189DE93F1DD5C741008C2F11 /* VSAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSAdsView.h; sourceTree = "<group>"; };
 		189DE9401DD5C741008C2F11 /* VSAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAdsView.m; sourceTree = "<group>"; };
 		18D958391DB37ECB0082DB7E /* NewActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivityCell.h; sourceTree = "<group>"; };
@@ -2563,7 +2570,6 @@
 		FF2CB0981CBF86C10054878F /* LeaseListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaseListCell.xib; sourceTree = "<group>"; };
 		FF2CB09B1CBFB24F0054878F /* MyRentalModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRentalModel.h; sourceTree = "<group>"; };
 		FF2CB09C1CBFB24F0054878F /* MyRentalModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRentalModel.m; sourceTree = "<group>"; };
-		FF2CB09E1CC077080054878F /* libPushSDK-1.8.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libPushSDK-1.8.8.a"; sourceTree = "<group>"; };
 		FF2CB0A01CC077260054878F /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		FF2CB0A21CC0775F0054878F /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		FF2CB0A41CC077760054878F /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -2718,7 +2724,6 @@
 		FFF660021CA3D9780075663A /* HomeBCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeBCollectionViewCell.m; sourceTree = "<group>"; };
 		FFF6600C1CA7AF170075663A /* NotificationAgentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationAgentViewController.h; sourceTree = "<group>"; };
 		FFF6600D1CA7AF170075663A /* NotificationAgentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationAgentViewController.m; sourceTree = "<group>"; };
-		FFF69CF81BF5B26100A00D24 /* APService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APService.h; sourceTree = "<group>"; };
 		FFF69CFC1BF5BBB600A00D24 /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		FFF69CFD1BF5BBB600A00D24 /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		FFF69D011BF5BD1B00A00D24 /* PushConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PushConfig.plist; path = Resources/PushConfig.plist; sourceTree = "<group>"; };
@@ -2790,16 +2795,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1886D67C20B82BB500F8C0E8 /* libresolv.tbd in Frameworks */,
 				5F9C58B81D7946C900F84984 /* JavaScriptCore.framework in Frameworks */,
 				96A274B01A8F392E001B5C98 /* CoreTelephony.framework in Frameworks */,
 				9679CAAA1AE3B66E00134BF2 /* MapKit.framework in Frameworks */,
 				96A274B21A8F3948001B5C98 /* libstdc++.dylib in Frameworks */,
 				FF2CB0A31CC0775F0054878F /* libWeiboSDK.a in Frameworks */,
 				96A275261A920A61001B5C98 /* iflyMSC.framework in Frameworks */,
+				1886D67620B8159000F8C0E8 /* jcore-ios-1.1.9.a in Frameworks */,
 				FF2CB0A51CC077760054878F /* libWeChatSDK.a in Frameworks */,
 				FF2CB0A11CC077260054878F /* libMobClickLibrary.a in Frameworks */,
 				96A274AE1A8F38E5001B5C98 /* CoreGraphics.framework in Frameworks */,
-				FF2CB09F1CC077080054878F /* libPushSDK-1.8.8.a in Frameworks */,
 				FF2CB0A71CC0778D0054878F /* libSunFlower.a in Frameworks */,
 				CECA26AF1A64C17B0067C1FC /* SystemConfiguration.framework in Frameworks */,
 				96A274AC1A8F38C4001B5C98 /* libiconv.dylib in Frameworks */,
@@ -2810,6 +2816,7 @@
 				5541CE651A78BB0200284AB1 /* AddressBook.framework in Frameworks */,
 				96A275221A920A61001B5C98 /* TencentOpenAPI.framework in Frameworks */,
 				5541CE631A78BAF900284AB1 /* AVFoundation.framework in Frameworks */,
+				1886D67720B8159000F8C0E8 /* jpush-ios-3.0.9.a in Frameworks */,
 				CECA26B31A64C1940067C1FC /* libz.dylib in Frameworks */,
 				CECA26B11A64C1840067C1FC /* libsqlite3.0.dylib in Frameworks */,
 				CECA26AD1A64C1610067C1FC /* libc++.dylib in Frameworks */,
@@ -2822,6 +2829,7 @@
 		0BD4E9063D72ACDADE9CBC86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1886D67B20B82BB400F8C0E8 /* libresolv.tbd */,
 				5F9C58B71D7946C800F84984 /* JavaScriptCore.framework */,
 				9679CAA91AE3B66E00134BF2 /* MapKit.framework */,
 				96A274B11A8F3948001B5C98 /* libstdc++.dylib */,
@@ -3003,6 +3011,16 @@
 				18605EE91F0B726000797F52 /* ArrowUpAndDownButton.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1886D66F20B8158F00F8C0E8 /* JPush */ = {
+			isa = PBXGroup;
+			children = (
+				1886D67120B8158F00F8C0E8 /* jcore-ios-1.1.9.a */,
+				1886D67320B8158F00F8C0E8 /* JPUSHService.h */,
+				1886D67420B8158F00F8C0E8 /* jpush-ios-3.0.9.a */,
+			);
+			path = JPush;
 			sourceTree = "<group>";
 		};
 		18DF23E21E1D41A7001D98E3 /* PageRoute */ = {
@@ -5216,12 +5234,12 @@
 		96A274EC1A920A60001B5C98 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				1886D66F20B8158F00F8C0E8 /* JPush */,
 				5FF6F3371D76F8FA006011C9 /* MJExtension */,
 				5FB9B2491D479375002FBFF0 /* TAPageControl */,
 				5FB9B23D1D479306002FBFF0 /* PXAlertView */,
 				268ECB271C4F55FA002D8897 /* Security */,
 				5F0421121C058EA300F616AF /* KeyBoard */,
-				FFF69CF71BF5B26100A00D24 /* Jpush */,
 				96123CA41A9E169D00F2A0B3 /* Umeng */,
 				96A274ED1A920A60001B5C98 /* Alipay */,
 				96A274F01A920A60001B5C98 /* DBManager */,
@@ -5940,6 +5958,7 @@
 		CE66F3611A612BC2009660F6 /* VSProject */ = {
 			isa = PBXGroup;
 			children = (
+				1886D66520B7B31B00F8C0E8 /* VSProject.entitlements */,
 				961239481A9213B400F2A0B3 /* BaseFrame */,
 				96A274EC1A920A60001B5C98 /* Library */,
 				CE66F3891A612D0C009660F6 /* Classes */,
@@ -6824,15 +6843,6 @@
 			path = views;
 			sourceTree = "<group>";
 		};
-		FFF69CF71BF5B26100A00D24 /* Jpush */ = {
-			isa = PBXGroup;
-			children = (
-				FFF69CF81BF5B26100A00D24 /* APService.h */,
-				FF2CB09E1CC077080054878F /* libPushSDK-1.8.8.a */,
-			);
-			path = Jpush;
-			sourceTree = "<group>";
-		};
 		FFF69CFB1BF5BBB600A00D24 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -6944,6 +6954,9 @@
 							};
 							com.apple.InAppPurchase = {
 								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
 							};
 						};
 					};
@@ -8120,11 +8133,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = C6SLLSA386;
+				DEVELOPMENT_TEAM = VTR25HFU8D;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -8140,7 +8153,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "045deeb4-bb8b-404c-a76a-c10c6514d211";
+				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -8163,11 +8176,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = C6SLLSA386;
+				DEVELOPMENT_TEAM = VTR25HFU8D;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -8181,7 +8194,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "045deeb4-bb8b-404c-a76a-c10c6514d211";
+				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -8195,8 +8208,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				CODE_SIGN_ENTITLEMENTS = VSProject/VSProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C6SLLSA386;
 				ENABLE_BITCODE = NO;
@@ -8213,7 +8228,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VSProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8223,6 +8238,7 @@
 					"$(PROJECT_DIR)/VSProject/Library/Share/WeiboSDK/libWeiboSDK",
 					"$(PROJECT_DIR)/VSProject/Library/Umeng",
 					"$(PROJECT_DIR)/VSProject/Library/Jpush",
+					"$(PROJECT_DIR)/VSProject/Library/JPush",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -8246,8 +8262,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenland.rtx.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
-				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
+				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
+				PROVISIONING_PROFILE_SPECIFIER = rui_develop;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "VSProject/Classes/MVC/function/PersonalHome/vc/views/VSProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -8262,8 +8278,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				CODE_SIGN_ENTITLEMENTS = VSProject/VSProject.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C6SLLSA386;
 				ENABLE_BITCODE = NO;
@@ -8280,7 +8298,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VSProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -8290,6 +8308,7 @@
 					"$(PROJECT_DIR)/VSProject/Library/Share/WeiboSDK/libWeiboSDK",
 					"$(PROJECT_DIR)/VSProject/Library/Umeng",
 					"$(PROJECT_DIR)/VSProject/Library/Jpush",
+					"$(PROJECT_DIR)/VSProject/Library/JPush",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
@@ -8313,8 +8332,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenland.rtx.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
-				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
+				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
+				PROVISIONING_PROFILE_SPECIFIER = rui_develop;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "VSProject/Classes/MVC/function/PersonalHome/vc/views/VSProject-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;

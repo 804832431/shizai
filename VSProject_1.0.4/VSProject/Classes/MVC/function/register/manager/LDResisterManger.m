@@ -82,7 +82,11 @@
         
         [[VSUserLogicManager shareInstance].userDataInfo vp_saveToLocal];
         [[NSNotificationCenter defaultCenter]postNotificationName:@"requestLayout" object:nil];
-        [Notification setJPushAlias];
+        
+        dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 0.5);
+        dispatch_after(time, dispatch_get_main_queue(), ^{
+            [Notification setJPushAlias];
+        });
         
         //获取默认地址
         [self getDefaultAdress];
