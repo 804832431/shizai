@@ -230,10 +230,16 @@ _PROPERTY_NONATOMIC_STRONG(NSString , selectedAreasString);
                     shouldAdd = NO;
                 }
             }
+            
             if (shouldAdd == YES) {
                 [self.selectedAreas addObject:a_model];
             } else {
                 [self.selectedAreas removeObject:a_model];
+            }
+            
+            if (self.shoulChooseForOnlyOne) {
+                [self.selectedAreas removeAllObjects];
+                [self.selectedAreas addObject:a_model];
             }
             
             //拼接回调字符串，接口用

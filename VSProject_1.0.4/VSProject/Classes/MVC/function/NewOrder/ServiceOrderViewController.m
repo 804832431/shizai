@@ -22,7 +22,7 @@
 #import "RefundReasonViewController.h"
 #import "NewEvaluateViewController.h"
 #import "MeEmptyDataView.h"
-
+#import "InvoiceApplyViewController.h"
 
 static NSString *MyOrdersTitleTableViewCellIdentifier = @"MyOrdersTitleTableViewCellIdentifier";
 static NSString *MyOrdersProductTableViewCellIdentifier = @"MyOrdersProductTableViewCellIdentifier";
@@ -609,6 +609,13 @@ static NSString *MyOrdersInfoAndOperationTableViewCellIdentifier = @"MyOrdersInf
         
         [cell setEvaluateOrder:^(Order *order) {
             [weakSelf evaluteOrder:order];
+        }];
+        
+        [cell setApplyInvoice:^(Order *order) {
+            //发票申请
+            InvoiceApplyViewController *vc = [[InvoiceApplyViewController alloc] init];
+            vc.order = order;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
         }];
         
         return cell;

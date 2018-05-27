@@ -62,6 +62,11 @@
 		1886D67620B8159000F8C0E8 /* jcore-ios-1.1.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67120B8158F00F8C0E8 /* jcore-ios-1.1.9.a */; };
 		1886D67720B8159000F8C0E8 /* jpush-ios-3.0.9.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67420B8158F00F8C0E8 /* jpush-ios-3.0.9.a */; };
 		1886D67C20B82BB500F8C0E8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1886D67B20B82BB400F8C0E8 /* libresolv.tbd */; };
+		1886D67F20B949EC00F8C0E8 /* InvoiceApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886D67E20B949EC00F8C0E8 /* InvoiceApplyViewController.m */; };
+		1886D68220B9557900F8C0E8 /* InvoiceInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886D68120B9557900F8C0E8 /* InvoiceInfoView.m */; };
+		1886D68420B9559400F8C0E8 /* InvoiceInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1886D68320B9559400F8C0E8 /* InvoiceInfoView.xib */; };
+		1886D68720B98E5800F8C0E8 /* InvoiceUserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1886D68620B98E5800F8C0E8 /* InvoiceUserView.m */; };
+		1886D68920B98E7500F8C0E8 /* InvoiceUserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1886D68820B98E7500F8C0E8 /* InvoiceUserView.xib */; };
 		189DE9411DD5C741008C2F11 /* VSAdsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DE9401DD5C741008C2F11 /* VSAdsView.m */; };
 		18D9583C1DB37ECB0082DB7E /* NewActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9583A1DB37ECB0082DB7E /* NewActivityCell.m */; };
 		18D9583D1DB37ECB0082DB7E /* NewActivityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D9583B1DB37ECB0082DB7E /* NewActivityCell.xib */; };
@@ -1181,6 +1186,14 @@
 		1886D67320B8158F00F8C0E8 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		1886D67420B8158F00F8C0E8 /* jpush-ios-3.0.9.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.9.a"; sourceTree = "<group>"; };
 		1886D67B20B82BB400F8C0E8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		1886D67D20B949EC00F8C0E8 /* InvoiceApplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvoiceApplyViewController.h; sourceTree = "<group>"; };
+		1886D67E20B949EC00F8C0E8 /* InvoiceApplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvoiceApplyViewController.m; sourceTree = "<group>"; };
+		1886D68020B9557900F8C0E8 /* InvoiceInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvoiceInfoView.h; sourceTree = "<group>"; };
+		1886D68120B9557900F8C0E8 /* InvoiceInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvoiceInfoView.m; sourceTree = "<group>"; };
+		1886D68320B9559400F8C0E8 /* InvoiceInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceInfoView.xib; sourceTree = "<group>"; };
+		1886D68520B98E5800F8C0E8 /* InvoiceUserView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InvoiceUserView.h; sourceTree = "<group>"; };
+		1886D68620B98E5800F8C0E8 /* InvoiceUserView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InvoiceUserView.m; sourceTree = "<group>"; };
+		1886D68820B98E7500F8C0E8 /* InvoiceUserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InvoiceUserView.xib; sourceTree = "<group>"; };
 		189DE93F1DD5C741008C2F11 /* VSAdsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSAdsView.h; sourceTree = "<group>"; };
 		189DE9401DD5C741008C2F11 /* VSAdsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSAdsView.m; sourceTree = "<group>"; };
 		18D958391DB37ECB0082DB7E /* NewActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewActivityCell.h; sourceTree = "<group>"; };
@@ -3471,7 +3484,6 @@
 			isa = PBXGroup;
 			children = (
 				536907CA1E0A2B6D0052768B /* DTO */,
-				536907CD1E0A2B6D0052768B /* Manger */,
 				536907CE1E0A2B6D0052768B /* VC */,
 				536907D11E0A2B6D0052768B /* View */,
 			);
@@ -3487,13 +3499,6 @@
 				4D4FD4911E0F79ED005125DC /* TagsDTO.m */,
 			);
 			path = DTO;
-			sourceTree = "<group>";
-		};
-		536907CD1E0A2B6D0052768B /* Manger */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manger;
 			sourceTree = "<group>";
 		};
 		536907CE1E0A2B6D0052768B /* VC */ = {
@@ -3517,6 +3522,8 @@
 				F97B611F1E222130002EE059 /* MySpaceCollecteViewController.m */,
 				4D4FD4961E1A76E7005125DC /* AppointmentOrderViewController.h */,
 				4D4FD4971E1A76E7005125DC /* AppointmentOrderViewController.m */,
+				1886D67D20B949EC00F8C0E8 /* InvoiceApplyViewController.h */,
+				1886D67E20B949EC00F8C0E8 /* InvoiceApplyViewController.m */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -3538,6 +3545,12 @@
 				530D1E4A1E23329C00354C8F /* MySpaceDetailAddressCell.m */,
 				530D1E4C1E233BFF00354C8F /* MuSpaceOrderInfoTableViewCell.h */,
 				530D1E4D1E233BFF00354C8F /* MuSpaceOrderInfoTableViewCell.m */,
+				1886D68020B9557900F8C0E8 /* InvoiceInfoView.h */,
+				1886D68120B9557900F8C0E8 /* InvoiceInfoView.m */,
+				1886D68320B9559400F8C0E8 /* InvoiceInfoView.xib */,
+				1886D68520B98E5800F8C0E8 /* InvoiceUserView.h */,
+				1886D68620B98E5800F8C0E8 /* InvoiceUserView.m */,
+				1886D68820B98E7500F8C0E8 /* InvoiceUserView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -7213,6 +7226,7 @@
 				96D23C0B1A7E6A00009F89F5 /* selfcheck_car02321.html in Resources */,
 				96D23C3F1A7E6A00009F89F5 /* selfcheck_car04131.html in Resources */,
 				96D23C651A7E6A00009F89F5 /* selfcheck_car0434.html in Resources */,
+				1886D68420B9559400F8C0E8 /* InvoiceInfoView.xib in Resources */,
 				FFF572F41C4F83AE00D77AD5 /* GreatActivityCell.xib in Resources */,
 				96D23C391A7E6A00009F89F5 /* selfcheck_car04113.html in Resources */,
 				96D23C0C1A7E6A00009F89F5 /* selfcheck_car0233.html in Resources */,
@@ -7389,6 +7403,7 @@
 				96D23C0E1A7E6A00009F89F5 /* selfcheck_car0234.html in Resources */,
 				96D23BA51A7E6A00009F89F5 /* selfcheck_car01232.html in Resources */,
 				96D23BA71A7E6A00009F89F5 /* selfcheck_car01241.html in Resources */,
+				1886D68920B98E7500F8C0E8 /* InvoiceUserView.xib in Resources */,
 				96D23BBC1A7E6A00009F89F5 /* selfcheck_car01311.html in Resources */,
 				96D23C9D1A7E6A00009F89F5 /* selfcheck_car04651.html in Resources */,
 				96D23BA31A7E6A00009F89F5 /* selfcheck_car0123.html in Resources */,
@@ -7610,6 +7625,7 @@
 				FF858EAC1BF07758002D2FB3 /* AdressParaModel.m in Sources */,
 				4D4FD49B1E1BE4D6005125DC /* CooperateViewController.m in Sources */,
 				2664DD6E1BE9CEEA003E5108 /* WebAppCommunicator.m in Sources */,
+				1886D68220B9557900F8C0E8 /* InvoiceInfoView.m in Sources */,
 				5FD4F8561BF7839200F5C2E7 /* OrderSumAndDiscountTableViewCell.m in Sources */,
 				CE81E1C11AA095C800C320A4 /* VSUserHeadCell.m in Sources */,
 				96CA62A81A9F6FFD00D45372 /* VSPersonInfoTitleCell.m in Sources */,
@@ -7739,6 +7755,7 @@
 				96123BB51A92306E00F2A0B3 /* VSBaseHandleMessageCenter.m in Sources */,
 				5F9C1D5A1C0F2CE8008B0FB7 /* OrderRefundReasonTableViewCell.m in Sources */,
 				4D663E7E1E0AD54A00707950 /* TagsSelectViewController.m in Sources */,
+				1886D67F20B949EC00F8C0E8 /* InvoiceApplyViewController.m in Sources */,
 				4D4FD4981E1A76E7005125DC /* AppointmentOrderViewController.m in Sources */,
 				2683C5B91C507E75000A2AE9 /* RTXMyUbanViewController.m in Sources */,
 				FF10C7251BE746050072D688 /* CenterViewController.m in Sources */,
@@ -7887,6 +7904,7 @@
 				96123B871A92304B00F2A0B3 /* UIView+MJExtension.m in Sources */,
 				66CCFA371F00EF9A0070F033 /* ServerRegion_2_TableViewCell.m in Sources */,
 				96123C0B1A92308300F2A0B3 /* UIButton+VSWebImage.m in Sources */,
+				1886D68720B98E5800F8C0E8 /* InvoiceUserView.m in Sources */,
 				96123B821A92304B00F2A0B3 /* MJRefreshConst.m in Sources */,
 				5F77DB441D520EB70059B680 /* RefundViewController.m in Sources */,
 				26919C3F1BF5F6C900838916 /* EFItemView.m in Sources */,

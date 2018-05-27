@@ -252,7 +252,7 @@
         }
         
         
-    } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_COMPLETED] && [order.orderHeader.isCanRate isEqualToString:@"Y"]) {// 订单完成
+    } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_COMPLETED]/* && [order.orderHeader.isCanRate isEqualToString:@"Y"]*/) {// 订单完成
         
         
         self.oneButton.hidden = YES;
@@ -268,16 +268,45 @@
         //        [self.threeButton setTitleColor:[UIColor colorFromHexRGB:@"7c7c7c"] forState:UIControlStateNormal];
         //        self.threeButton.layer.borderColor = [[UIColor colorFromHexRGB:@"7c7c7c"]CGColor];
         
-        if ([order.orderHeader.orderTypeId isEqualToString:SZ_SALES_ORDER_O2O_SERVICE_PAY]) {
+//        if ([order.orderHeader.orderTypeId isEqualToString:SZ_SALES_ORDER_O2O_SERVICE_PAY]) {
+//            self.threeButton.hidden = NO;
+//            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
+//            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
+//        }else{
+//            self.threeButton.hidden = NO;
+//            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
+//            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
+//        }
+        
+        if ([order.orderHeader.invoiceStatus isEqualToString:@""]) {
             self.threeButton.hidden = NO;
-            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
-            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
-        }else{
+            [self.threeButton setTitle:@"发票申请" forState:UIControlStateNormal];
+            [self.threeButton setTitleColor:ColorWithHex(0x8fc31f, 1.0) forState:UIControlStateNormal];
+            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0xffffff"];
+        } else if ([order.orderHeader.invoiceStatus isEqualToString:@"NOT_ACCEPT"]) {
             self.threeButton.hidden = NO;
-            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
-            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
+            [self.threeButton setTitle:@"发票申请-待受理" forState:UIControlStateNormal];
+            [self.threeButton setTitleColor:ColorWithHex(0x8fc31f, 1.0) forState:UIControlStateNormal];
+            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0xffffff"];
+            [self.threeButton mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.centerY.equalTo(self.totalMoney);
+                make.trailing.equalTo(self.contentView).offset(-10);
+                make.height.equalTo(@20);
+                make.width.equalTo(@100);
+            }];
+        } else if ([order.orderHeader.invoiceStatus isEqualToString:@"ACCEPT"]) {
+            self.threeButton.hidden = NO;
+            [self.threeButton setTitle:@"发票申请-已受理" forState:UIControlStateNormal];
+            [self.threeButton setTitleColor:ColorWithHex(0x8fc31f, 1.0) forState:UIControlStateNormal];
+            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0xffffff"];
+            [self.threeButton mas_updateConstraints:^(MASConstraintMaker *make) {
+                make.centerY.equalTo(self.totalMoney);
+                make.trailing.equalTo(self.contentView).offset(-10);
+                make.height.equalTo(@20);
+                make.width.equalTo(@100);
+            }];
         }
         
     } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_APPROVED]) {// 待接单
@@ -360,6 +389,10 @@
     }else if ([title  isEqualToString:@"去评价"]) {
         if (self.evaluateOrder) {
             self.evaluateOrder(self.order);
+        }
+    }else if ([title  isEqualToString:@"发票申请"]) {
+        if (self.applyInvoice) {
+            self.applyInvoice(self.order);
         }
     }
 }

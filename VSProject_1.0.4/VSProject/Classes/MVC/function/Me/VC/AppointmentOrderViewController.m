@@ -584,16 +584,11 @@ static NSString *MyOrdersInfoAndOperationTableViewCellIdentifier = @"MyOrdersInf
 }
 
 - (void)showOrderDetail:(Order *)order{
-    //    if ([order.orderHeader.orderTypeId isEqualToString:SALES_ORDER_O2O_SERVICE]) {
-    
-//    O2OOrderDetailViewController *vc = [O2OOrderDetailViewController new];
     SpaceOrderDetailViewController *vc = [SpaceOrderDetailViewController new];
-    
+
     vc.orderId = order.orderHeader.orderId;
-    
+
     [self.navigationController pushViewController:vc animated:YES];
-    
-    //    }
 }
 #pragma mark -
 -(void)showAlertView{

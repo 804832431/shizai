@@ -570,6 +570,10 @@
     vc.quantity = [dic objectForKey:@"quantity"];
     vc.categoryId = [dic objectForKey:@"categoryId"];
     vc.orderType = [dic objectForKey:@"orderType"];
+    
+    if ([self isKindOfClass:NSClassFromString(@"SpaceDetailWebViewController")]) {
+        vc.spaceType = [[self valueForKey:@"model"] valueForKey:@"spaceType"];
+    }
     [self.navigationController pushViewController:vc animated:YES];
 }
 

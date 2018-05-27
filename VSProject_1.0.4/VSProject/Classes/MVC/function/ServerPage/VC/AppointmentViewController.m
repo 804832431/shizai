@@ -132,6 +132,10 @@
     if (!_contactPersonEdit) {
         _contactPersonEdit = [[UITextField alloc] init];
         _contactPersonEdit.frame = CGRectMake(20.0f, self.contactPersonLabel.frame.origin.y + self.contactPersonLabel.frame.size.height + 10.0f, MainWidth - 20.0f*2, 44.0f);
+        NSMutableAttributedString *placeHolder = [[NSMutableAttributedString alloc] initWithString:@"(必填)"];
+        [placeHolder addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0] range:NSMakeRange(0, placeHolder.length)];
+        [placeHolder addAttribute:NSForegroundColorAttributeName value:_COLOR_HEX(0x999999) range:NSMakeRange(0, placeHolder.length)];
+        _contactPersonEdit.attributedPlaceholder = placeHolder;
         _contactPersonEdit.textAlignment = NSTextAlignmentCenter;
         _contactPersonEdit.backgroundColor = [UIColor whiteColor];
         _contactPersonEdit.layer.masksToBounds = YES;
@@ -151,7 +155,7 @@
         _telphoneLabel.font = [UIFont systemFontOfSize:13.0f];
         _telphoneLabel.textColor = _COLOR_HEX(0x333333);
         _telphoneLabel.textAlignment = NSTextAlignmentLeft;
-        _telphoneLabel.text = @"联系电话";
+        _telphoneLabel.text = @"联系电话（手机号码）";
     }
     return _telphoneLabel;
 }
@@ -165,6 +169,7 @@
         [placeHolder addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0] range:NSMakeRange(0, placeHolder.length)];
         [placeHolder addAttribute:NSForegroundColorAttributeName value:_COLOR_HEX(0x999999) range:NSMakeRange(0, placeHolder.length)];
         _telphoneEdit.attributedPlaceholder = placeHolder;
+        _telphoneEdit.keyboardType = UITextContentTypeTelephoneNumber;
         _telphoneEdit.textAlignment = NSTextAlignmentCenter;
         _telphoneEdit.backgroundColor = [UIColor whiteColor];
         _telphoneEdit.layer.masksToBounds = YES;
@@ -195,6 +200,12 @@
     if (!_enterpriseNameEdit) {
         _enterpriseNameEdit = [[UITextField alloc] init];
         _enterpriseNameEdit.frame = CGRectMake(20.0f, self.enterpriseNameLabel.frame.origin.y + self.enterpriseNameLabel.frame.size.height + 10.0f, MainWidth - 20.0f*2, 44.0f);
+        if ([self.spaceType isEqualToString:@"mobileStation"]) {
+            NSMutableAttributedString *placeHolder = [[NSMutableAttributedString alloc] initWithString:@"(必填)"];
+            [placeHolder addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:14.0] range:NSMakeRange(0, placeHolder.length)];
+            [placeHolder addAttribute:NSForegroundColorAttributeName value:_COLOR_HEX(0x999999) range:NSMakeRange(0, placeHolder.length)];
+            _enterpriseNameEdit.attributedPlaceholder = placeHolder;
+        }
         _enterpriseNameEdit.textAlignment = NSTextAlignmentCenter;
         _enterpriseNameEdit.backgroundColor = [UIColor whiteColor];
         _enterpriseNameEdit.layer.masksToBounds = YES;
@@ -255,6 +266,8 @@
     if (!_needTextView) {
         _needTextView = [[PlaceholderTextView alloc] init];
         _needTextView.frame = CGRectMake(20.0f, self.needLabel.frame.origin.y + self.needLabel.frame.size.height + 10.0f, MainWidth - 20.0f*2, 150.0f);
+        _needTextView.placeholder = @"如有额外需求，\n请您填写工位数量、入驻时间等备注信息";
+        _needTextView.placeholderColor = _COLOR_HEX(0x999999);
         _needTextView.textAlignment = NSTextAlignmentCenter;
         _needTextView.backgroundColor = [UIColor whiteColor];
         _needTextView.scrollEnabled = NO;
@@ -321,8 +334,29 @@
 }
 
 - (void)commitAction:(UIButton *)button {
-    
+    BOOL shouldSubmit = YES;
     if ([self.telphoneEdit.text isEqualToString:@""]) {
+        shouldSubmit = NO;
+    }
+    
+    if ([self.contactPersonEdit.text isEqualToString:@""]) {
+        shouldSubmit = NO;
+    }
+    
+    if ([self.spaceType isEqualToString:@"mobileStation"] && [self.enterpriseNameEdit.text isEqualToString:@""]) {
+        shouldSubmit = NO;
+    }
+    
+    if (shouldSubmit) {
+        //信息都填了，手机号校验
+        if ([self.telphoneEdit.text hasPrefix:@"1"] && self.telphoneEdit.text.length == 11) {
+            // 提交
+            [self productSubscribe];
+        } else {
+            [self.view showTipsView:@"请输入11位手机号码"];
+        }
+        
+    } else {
         PXAlertView *alertView = [PXAlertView showAlertWithTitle:@"提示" message:@"亲~你还有信息未填写哦~" cancelTitle:@"确定" otherTitle:nil completion:^(BOOL cancelled, NSInteger buttonIndex) {
         }];
         
@@ -332,10 +366,7 @@
         [alertView setCancelButtonTextColor:[UIColor grayColor]];
         [alertView setOtherButtonTextColor:[UIColor grayColor]];
     }
-    else {
-        // 提交
-        [self productSubscribe];
-    }
+    
 }
 
 - (void)productSubscribe {

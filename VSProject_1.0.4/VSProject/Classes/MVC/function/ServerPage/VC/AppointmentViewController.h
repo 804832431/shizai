@@ -18,4 +18,6 @@
 
 @property (nonatomic, copy) NSString *orderType;
 
+@property (nonatomic, copy) NSString *spaceType;
+
 @end

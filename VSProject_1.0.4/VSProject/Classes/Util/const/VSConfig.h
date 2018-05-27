@@ -34,24 +34,7 @@
 
 //
 /*-----------------***测试***-----------------*/
-//#define PIC_SERVER_IP           @"http://101.201.151.21"
-//#define SERVER_IP_H5            [NSString stringWithFormat:@"%@:8088",PIC_SERVER_IP]
-//#define SERVER_IP               [NSString stringWithFormat:@"%@/api/jsonws",SERVER_IP_H5]
-//
-//
-//#define USERNAME    @"admin"
-//#define PASSWORD    @"ruiXZTDN76"
-//
-////DES密钥
-//#define APP_DES_PASSWORDKEY     @"RUI12321"
-//
-//#define PUSH_SUFFIX    @""
-/*-------------------------------------*/
-
-
-
-/*-----------------***生产ip**单版本号*-----------------*/
-#define PIC_SERVER_IP           @"http://182.92.31.87"
+#define PIC_SERVER_IP           @"http://101.201.151.21"
 #define SERVER_IP_H5            [NSString stringWithFormat:@"%@:8088",PIC_SERVER_IP]
 #define SERVER_IP               [NSString stringWithFormat:@"%@/api/jsonws",SERVER_IP_H5]
 
@@ -63,6 +46,23 @@
 #define APP_DES_PASSWORDKEY     @"RUI12321"
 
 #define PUSH_SUFFIX    @""
+/*-------------------------------------*/
+
+
+
+/*-----------------***生产ip**单版本号*-----------------*/
+//#define PIC_SERVER_IP           @"http://182.92.31.87"
+//#define SERVER_IP_H5            [NSString stringWithFormat:@"%@:8088",PIC_SERVER_IP]
+//#define SERVER_IP               [NSString stringWithFormat:@"%@/api/jsonws",SERVER_IP_H5]
+//
+//
+//#define USERNAME    @"admin"
+//#define PASSWORD    @"ruiXZTDN76"
+//
+////DES密钥
+//#define APP_DES_PASSWORDKEY     @"RUI12321"
+//
+//#define PUSH_SUFFIX    @""
 
 /*-------------------------------------*/
 

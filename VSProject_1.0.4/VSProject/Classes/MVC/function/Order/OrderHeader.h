@@ -26,4 +26,5 @@ _PROPERTY_NONATOMIC_STRONG_OPTION(NSString,isCanRefund);//是否能退款
 
 _PROPERTY_NONATOMIC_STRONG_OPTION(NSString,refundAmount);//退款金额
 _PROPERTY_NONATOMIC_STRONG_OPTION(NSString,paymentType);//支付方式，EXT_ALIPAY：支付宝， EXT_WECHATPAY：微信
+_PROPERTY_NONATOMIC_STRONG_OPTION(NSString,invoiceStatus);//NOT_ACCEPT：待受理、ACCEPT：已受理 （值是空说明未申请过发票）
 @end

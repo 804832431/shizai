@@ -22,6 +22,8 @@ _PROPERTY_NONATOMIC_STRONG(UIButton, confirmButton);
 
 @property (nonatomic, strong) OnSelectedAreaBlock onSelectedAreaBlock;
 
+@property (nonatomic, assign) BOOL shoulChooseForOnlyOne;
+
 - (void)onSetCityList:(NSArray *)cityList;
 
 @end
