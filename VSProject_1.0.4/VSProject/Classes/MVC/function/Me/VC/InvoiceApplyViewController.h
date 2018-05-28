@@ -11,6 +11,6 @@
 
 @interface InvoiceApplyViewController : VSBaseViewController
 
-@property (nonatomic, copy) Order *order;
+@property (nonatomic, strong) Order *order;
 
 @end

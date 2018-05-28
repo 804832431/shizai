@@ -59,13 +59,15 @@
     
     requestGroup = dispatch_group_create();
     
+    manger = [[NewPolicyManager alloc] init];
+    [self getCityAndDistrict];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, MainWidth, MainHeight - 64.0f)];
     [scrollView setContentSize:self.appointmentView.frame.size];
     [scrollView addSubview:self.appointmentView];
     [self.view addSubview:scrollView];
-    
-    manger = [[NewPolicyManager alloc] init];
-    [self getCityAndDistrict];
 }
 
 - (void)didReceiveMemoryWarning {

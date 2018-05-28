@@ -27,6 +27,7 @@
 
 @property (nonatomic,copy) void (^evaluateOrder)(Order *order);//去评论
 
+@property (nonatomic,copy) void (^applyInvoice)(Order *order);//去申请发票
 
 @property (nonatomic,strong) Order *order;
 

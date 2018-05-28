@@ -283,8 +283,8 @@
         if ([order.orderHeader.invoiceStatus isEqualToString:@""]) {
             self.threeButton.hidden = NO;
             [self.threeButton setTitle:@"发票申请" forState:UIControlStateNormal];
-            [self.threeButton setTitleColor:ColorWithHex(0x8fc31f, 1.0) forState:UIControlStateNormal];
-            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0xffffff"];
+            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
         } else if ([order.orderHeader.invoiceStatus isEqualToString:@"NOT_ACCEPT"]) {
             self.threeButton.hidden = NO;
             [self.threeButton setTitle:@"发票申请-待受理" forState:UIControlStateNormal];

@@ -18,7 +18,7 @@
 #import "OrderRefundReasonTableViewCell.h"
 #import "RTXReadyPayAlertView.h"
 #import "NewEvaluateViewController.h"
-
+#import "InvoiceApplyViewController.h"
 
 
 static  NSString* OrderAddressTableViewCellIdentifier = @"OrderAddressTableViewCellIdentifier";
@@ -232,6 +232,13 @@ static NSString* OrderRefundReasonTableViewCellIdentifier = @"OrderRefundReasonT
             [cell setEvaluateOrder:^(Order *order) {
                 //评价
                 [weakSelf evaluteOrder:order];
+            }];
+            
+            [cell setApplyInvoice:^(Order *order) {
+                //发票申请
+                InvoiceApplyViewController *vc = [[InvoiceApplyViewController alloc] init];
+                vc.order = order;
+                [weakSelf.navigationController pushViewController:vc animated:YES];
             }];
             
             return cell;
