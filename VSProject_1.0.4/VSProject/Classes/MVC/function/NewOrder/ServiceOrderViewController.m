@@ -456,9 +456,11 @@ static NSString *MyOrdersInfoAndOperationTableViewCellIdentifier = @"MyOrdersInf
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(payFail:) name:kWXPayFailNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orderStatusChanged:) name:kOrderStatusNotification object:nil];
-    
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    UITableView *tableView = [self.contentTaleViews  objectAtIndex:self.index];
+    [tableView headerBeginRefreshing];
 }
 
 #pragma mark - 订单支付成功

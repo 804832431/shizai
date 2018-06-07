@@ -46,6 +46,8 @@
 #import "ServerViewController.h"
 #import "MeCenterViewController.h"
 #import "DiscoverViewController.h"
+#import "NewShareWebViewController.h"
+
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
@@ -108,7 +110,7 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
     [JPUSHService setupWithOption:launchOptions
                            appKey:@"cedf79f550682349b8ea15ab"
                           channel:@"App Store"
-                 apsForProduction:NO
+                 apsForProduction:YES
             advertisingIdentifier:nil];
     
     //2.1.9版本新增获取registration id block接口。
@@ -122,7 +124,6 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
     }];
 //    [Notification startJPushWithOptions:launchOptions];
     
-    application.applicationIconBadgeNumber = 1;
     application.applicationIconBadgeNumber = 0;
     
     [WXApi registerApp:WeiXinAppId];
@@ -462,20 +463,55 @@ _PROPERTY_NONATOMIC_STRONG(VSRootTabBarViewController, rootVC);
         application.applicationIconBadgeNumber = 1;
         application.applicationIconBadgeNumber = 0;
         
-        NSDictionary *aps = [userInfo objectForKey:@"aps"];
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:[aps objectForKey:@"alert"] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-        [alert show];
+        NSString *url = [userInfo objectForKey:@"url"];
+        NSString *MESSAGE_ID = [userInfo objectForKey:@"MESSAGE_ID"];
+        if (![url isEqualToString:@""]) {
+            if ([url hasPrefix:@"http"]) {
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NewShareWebViewController *vc = [[NewShareWebViewController alloc] initWithUrl:[NSURL URLWithString:url]];
+                    [[VSPageRoute currentNav] pushViewController:vc animated:YES];
+                });
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:url delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        } else {
+            if (![MESSAGE_ID isEqualToString:@""]) {
+                MessageModel *model = [MessageModel new];
+                model.id = [[userInfo objectForKey:@"extras"] objectForKey:@"MESSAGE_ID"];
+                MessageContentViewController *vc = [[MessageContentViewController alloc]init];
+                vc.m_model = model;
+                [self.window.rootViewController presentViewController:vc animated:NO completion:^{
+                    //
+                }];
+            }
+        }
     }else {
-//        MessageModel *model = [MessageModel new];
-//        model.id = [[userInfo objectForKey:@"extras"] objectForKey:@"MESSAGE_ID"];
-//        MessageContentViewController *vc = [[MessageContentViewController alloc]init];
-//        vc.m_model = model;
-//        [self.window.rootViewController presentViewController:vc animated:NO completion:^{
-//            //
-//        }];
-        NSDictionary *aps = [userInfo objectForKey:@"aps"];
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:[aps objectForKey:@"alert"] delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
-        [alert show];
+        NSString *url = [userInfo objectForKey:@"url"];
+        NSString *MESSAGE_ID = [userInfo objectForKey:@"MESSAGE_ID"];
+        if (![url isEqualToString:@""]) {
+            if ([url hasPrefix:@"http"]) {
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC);
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    NewShareWebViewController *vc = [[NewShareWebViewController alloc] initWithUrl:[NSURL URLWithString:url]];
+                    [[VSPageRoute currentNav] pushViewController:vc animated:YES];
+                });
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:url delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        } else {
+            if (![MESSAGE_ID isEqualToString:@""]) {
+                MessageModel *model = [MessageModel new];
+                model.id = [[userInfo objectForKey:@"extras"] objectForKey:@"MESSAGE_ID"];
+                MessageContentViewController *vc = [[MessageContentViewController alloc]init];
+                vc.m_model = model;
+                [self.window.rootViewController presentViewController:vc animated:NO completion:^{
+                    //
+                }];
+            }
+        }
     }
 }
 

@@ -72,10 +72,10 @@
     
     if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
         //可以添加自定义categories
-        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:NO];
+        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:YES];
     } else {
         //categories 必须为nil
-        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:NO];
+        [JPUSHService setupWithOption:launchOptions appKey:@"cedf79f550682349b8ea15ab" channel:@"AppStore" apsForProduction:YES];
     }
 }
 

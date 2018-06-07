@@ -252,34 +252,12 @@
         }
         
         
-    } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_COMPLETED]/* && [order.orderHeader.isCanRate isEqualToString:@"Y"]*/) {// 订单完成
-        
-        
+    } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_COMPLETED]/* && [order.orderHeader.isCanRate isEqualToString:@"Y"]*/) {
+        // 订单完成
         self.oneButton.hidden = YES;
         self.twoButton.hidden = YES;
         self.threeButton.hidden = YES;
-        
-        //        if ([order.orderHeader.orderTypeId isEqualToString:SALES_ORDER_B2C]) {
-        //            self.threeButton.hidden = NO;
-        //            [self.threeButton setTitle:@"查看物流" forState:UIControlStateNormal];
-        //        }else{
-        //            self.threeButton.hidden = YES;
-        //        }
-        //        [self.threeButton setTitleColor:[UIColor colorFromHexRGB:@"7c7c7c"] forState:UIControlStateNormal];
-        //        self.threeButton.layer.borderColor = [[UIColor colorFromHexRGB:@"7c7c7c"]CGColor];
-        
-//        if ([order.orderHeader.orderTypeId isEqualToString:SZ_SALES_ORDER_O2O_SERVICE_PAY]) {
-//            self.threeButton.hidden = NO;
-//            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
-//            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
-//        }else{
-//            self.threeButton.hidden = NO;
-//            [self.threeButton setTitle:@"去评价" forState:UIControlStateNormal];
-//            [self.threeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//            self.threeButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
-//        }
-        
+        //发票申请相关
         if ([order.orderHeader.invoiceStatus isEqualToString:@""]) {
             self.threeButton.hidden = NO;
             [self.threeButton setTitle:@"发票申请" forState:UIControlStateNormal];
@@ -308,6 +286,34 @@
                 make.width.equalTo(@100);
             }];
         }
+        
+        //评价
+        if ([order.orderHeader.isCanRate isEqualToString:@"Y"]) {
+            if ([order.orderHeader.orderTypeId isEqualToString:SZ_SALES_ORDER_O2O_SERVICE_PAY]) {
+                self.twoButton.hidden = NO;
+                [self.twoButton setTitle:@"去评价" forState:UIControlStateNormal];
+                [self.twoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                self.twoButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
+            }else{
+                self.twoButton.hidden = NO;
+                [self.twoButton setTitle:@"去评价" forState:UIControlStateNormal];
+                [self.twoButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                self.twoButton.backgroundColor = [UIColor colorFromHexRGB:@"0x35b38d"];
+            }
+        }
+        
+        //查看物流
+        if ([order.orderHeader.orderTypeId isEqualToString:SALES_ORDER_B2C]) {
+            self.oneButton.hidden = NO;
+            [self.oneButton setTitle:@"查看物流" forState:UIControlStateNormal];
+            [self.oneButton setTitleColor:[UIColor colorFromHexRGB:@"7c7c7c"] forState:UIControlStateNormal];
+            self.oneButton.layer.borderColor = [[UIColor colorFromHexRGB:@"7c7c7c"]CGColor];
+        }else{
+            self.oneButton.hidden = YES;
+            [self.oneButton setTitleColor:[UIColor colorFromHexRGB:@"7c7c7c"] forState:UIControlStateNormal];
+            self.oneButton.layer.borderColor = [[UIColor colorFromHexRGB:@"7c7c7c"]CGColor];
+        }
+        
         
     } else if ([order.orderHeader.orderStatus isEqualToString:SZ_ORDER_APPROVED]) {// 待接单
         

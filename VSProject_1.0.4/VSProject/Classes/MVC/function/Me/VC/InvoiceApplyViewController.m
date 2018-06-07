@@ -55,6 +55,8 @@
     
     [self vs_setTitleText:@"发票信息填写"];
     
+    self.titleType = @"ENTERPRISE";
+    
     self.view.backgroundColor = _COLOR_HEX(0xf9f9f9);
     
     requestGroup = dispatch_group_create();
@@ -632,7 +634,7 @@
 - (void)productSubscribe {
     
     dispatch_group_enter(requestGroup);
-    NSString *partyId = [VSUserLogicManager shareInstance].userDataInfo.vm_userInfo.partyId?:@"";
+    NSString *userLoginId = [VSUserLogicManager shareInstance].userDataInfo.vm_userInfo.username?:@"";
     NSDictionary *dic = @{
                           @"orderId" : self.order.orderHeader.orderId,
                           @"invoiceType" : @"1",
@@ -642,7 +644,7 @@
                           @"contacts" : self.contactsTextField.text,
                           @"contactNumber": self.contactNumberTextField.text,
                           @"address": [NSString stringWithFormat:@"%@%@",self.cityTextField.text,self.addressTextView.text],
-                          @"userLoginId" : partyId,
+                          @"userLoginId" : userLoginId,
                           };
     
     NSString *jsonString = [VSPageRoute dictionaryToJson:dic];

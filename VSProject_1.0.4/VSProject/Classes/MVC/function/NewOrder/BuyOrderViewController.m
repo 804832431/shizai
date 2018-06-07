@@ -187,7 +187,7 @@ static NSString *MyOrdersInfoAndOperationTableViewCellIdentifier = @"MyOrdersInf
     
     [self.orderTypeSegmentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.top.equalTo(weakSelf.view);
-        make.height.mas_equalTo(43);
+        make.height.mas_equalTo(47);
     }];
     
     CGFloat width = ([UIScreen mainScreen].bounds.size.width - 10 * 5)/4;
@@ -460,10 +460,11 @@ static NSString *MyOrdersInfoAndOperationTableViewCellIdentifier = @"MyOrdersInf
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(payFail:) name:kWXPayFailNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orderStatusChanged:) name:kOrderStatusNotification object:nil];
-    
-    
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    UITableView *tableView = [self.contentTaleViews  objectAtIndex:self.index];
+    [tableView headerBeginRefreshing];
 }
 
 #pragma mark - 订单支付成功

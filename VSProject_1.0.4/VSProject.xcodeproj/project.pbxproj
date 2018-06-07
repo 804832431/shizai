@@ -8151,11 +8151,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
 				COPY_PHASE_STRIP = NO;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VTR25HFU8D;
+				DEVELOPMENT_TEAM = C6SLLSA386;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -8171,7 +8171,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
+				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
+				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -8194,11 +8195,11 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
 				COPY_PHASE_STRIP = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = VTR25HFU8D;
+				DEVELOPMENT_TEAM = C6SLLSA386;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -8212,7 +8213,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
+				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
+				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -8227,8 +8229,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VSProject/VSProject.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C6SLLSA386;
@@ -8261,7 +8263,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
@@ -8277,11 +8278,12 @@
 					"-framework",
 					"\"UIKit\"",
 					"-fobjc-arc",
+					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenland.rtx.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
-				PROVISIONING_PROFILE_SPECIFIER = rui_develop;
+				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
+				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "VSProject/Classes/MVC/function/PersonalHome/vc/views/VSProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -8297,8 +8299,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VSProject/VSProject.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuo wang (55GAD59W29)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuo wang (55GAD59W29)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing Rui world new media information technology Co., Ltd. (C6SLLSA386)";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = C6SLLSA386;
@@ -8331,7 +8333,6 @@
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
 					"-framework",
 					"\"CoreGraphics\"",
 					"-framework",
@@ -8347,11 +8348,12 @@
 					"-framework",
 					"\"UIKit\"",
 					"-fobjc-arc",
+					"-Objc",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.greenland.rtx.customer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "cace03ba-9205-44c5-9954-70eef9ba443c";
-				PROVISIONING_PROFILE_SPECIFIER = rui_develop;
+				PROVISIONING_PROFILE = "f479115a-ae1a-41b9-ac5d-38b5545500b8";
+				PROVISIONING_PROFILE_SPECIFIER = rui_distribution_2018;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "VSProject/Classes/MVC/function/PersonalHome/vc/views/VSProject-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
